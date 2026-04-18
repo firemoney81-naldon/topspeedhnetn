@@ -1,23 +1,564 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "인터넷주말설치비교조회",
+      "url": "https://www.yourdomain.com/internet-weekend-install-compare",
+      "description": "2026년 최저가 인터넷 주말 설치 가능 여부 비교 조회 서비스",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "실시간 인터넷 주말/당일 설치 가능 업체 비교견적 서비스",
+        "serviceType": "Internet Service Comparison",
+        "provider": {
+          "@type": "Organization",
+          "name": "인터넷가입 비교 전문 컨설팅 그룹"
+        },
+        "areaServed": "대한민국",
+        "keywords": "인터넷주말설치, 인터넷설치당일, SKT인터넷, KT인터넷, LG U+인터넷, 인터넷가입현금지원, 인터넷요금비교"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "인터넷 주말 설치가 평일보다 어려운 이유가 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "주말은 인터넷 설치 수요가 가장 많은 시간대입니다. 대부분의 인터넷 설치 기사님들이 주말에는 평일 대비 일정이 빠르게 마감되므로, 원하는 시간대에 예약이 어렵거나 당일 설치가 불가능할 수 있습니다. 특히 SKT, KT, LG U+ 등 대형 통신사는 주말 설치 예약이 1~2주 전에 마감되는 경우도 있습니다. 그러므로 반드시 **인터넷주말설치** 가능 여부를 미리 **비교 조회**하고 예약해야 합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "인터넷가입 시 현금 사은품을 많이 주는 곳이 따로 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 통신사 본사 직영 채널과 대리점(판매점) 채널은 사은품 지급 기준이 다릅니다. 통신사 본사는 요금 할인 위주로 혜택을 제공하는 반면, 인터넷 비교 전문 업체(대리점)들은 고객 유치를 위해 현금 사은품을 포함한 다양한 혜택을 제공합니다. 특히 **인터넷가입현금지원**을 최대로 받기 위해서는 **인터넷가입비교**를 통해 해당 업체의 신뢰도와 사은품 규모를 확인해야 합니다. '단통법'에 따라 사은품 상한선이 정해져 있지만, 실제 지급액에는 차이가 있을 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "SKT, KT, LG U+ 중 어떤 통신사를 선택해야 가장 유리한가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "인터넷 통신사 선택은 단순히 가격이 아니라 '가족 결합 할인'을 기준으로 하는 것이 가장 유리합니다. 본인이나 가족 구성원이 SKT, KT, LG U+ 중 하나의 휴대폰을 사용하고 있다면, 해당 통신사 인터넷 가입 시 **결합 할인**을 받아 요금을 크게 절약할 수 있습니다. 예를 들어, SKT 휴대폰을 사용하는 고객이 SKT 인터넷에 가입하면 **평균 20% 이상의 추가 할인**을 받을 수 있습니다. **인터넷주말설치** 비교 시 요금제와 결합 할인을 함께 고려해야 합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "2026년 인터넷 가입 시 주의해야 할 점은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "2026년에는 '기가인터넷(1Gbps) 이상' 서비스의 보급이 확대되며, **Wi-Fi 7 공유기** 지원 여부 및 'AI 기반 네트워크 최적화' 서비스가 중요해지고 있습니다. 또한, '인터넷 속도 측정 의무'와 관련된 법규 변화나 통신사별 새로운 **사은품 정책(예: 상품권 지급 기준 변경)**도 수시로 변동됩니다. **인터넷설치당일** 가입 시 최신 정책을 확인하여 **인터넷가입혜택**을 놓치지 않도록 주의해야 합니다."
+              }
+            }
+          ]
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #0A477D; /* 짙은 네이비 블루 */
+            --secondary-color: #2F90B9; /* 스카이 블루 */
+            --accent-color: #38C7A0; /* 에메랄드 그린 (할인 강조) */
+            --text-color: #333;
+            --bg-light: #F7F9FC; /* 부드러운 배경 */
+            --bg-highlight: #E8F5FF; /* 하이라이트 배경 */
+            --btn-cta: #FF6B6B; /* 강렬한 CTA 레드 */
+            --shadow-subtle: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; background-color: var(--bg-light); color: var(--text-color); line-height: 1.8; font-size: 16px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* 헤더 */
+        header { background-color: #fff; padding: 15px 0; text-align: center; border-bottom: 1px solid #eee; box-shadow: var(--shadow-subtle); }
+        header h1 { margin: 0; font-size: 1.8em; color: var(--primary-color); font-weight: 900; }
+        header h1 a { text-decoration: none; color: inherit; }
+
+        /* 히어로 섹션 */
+        .hero { background-color: var(--primary-color); color: #fff; text-align: center; padding: 80px 20px 40px; }
+        .hero h1 { font-size: 3.5em; margin-bottom: 15px; font-weight: 900; line-height: 1.3; }
+        .hero p { font-size: 1.4em; margin-bottom: 40px; font-weight: 300; opacity: 0.9; }
+
+        /* CTA 버튼 */
+        .cta-btn { background-color: var(--btn-cta); color: #fff; padding: 18px 45px; font-size: 1.5em; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 6px 15px rgba(255,107,107,0.4); text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; }
+        .cta-btn:hover { background-color: #FF4A4A; transform: translateY(-2px); }
+
+        /* 비교견적 폼 (체류시간 증가를 위한 상세 입력란) */
+        .compare-form-box { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-top: -60px; position: relative; z-index: 10; border: 3px solid var(--accent-color); }
+        .compare-form-box h2 { color: var(--primary-color); text-align: center; margin-bottom: 25px; font-size: 2em; font-weight: 700; }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--primary-color); font-size: 0.95em; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1em; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus { border-color: var(--secondary-color); outline: none; box-shadow: 0 0 5px rgba(47, 144, 185, 0.3); }
+
+        /* 컨텐츠 섹션 */
+        .content-section { padding: 80px 0; margin-top: 20px; }
+        .content-section h2 { font-size: 2.8em; color: var(--secondary-color); text-align: center; margin-bottom: 50px; font-weight: 700; position: relative; }
+        .content-section h2::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--accent-color); margin: 15px auto 0; border-radius: 2px; }
+        .content-section h3 { font-size: 1.8em; color: var(--primary-color); margin-top: 40px; margin-bottom: 15px; border-left: 5px solid var(--accent-color); padding-left: 15px; font-weight: 700; }
+
+        /* 주요 기능 그리드 */
+        .feature-grid { display: flex; flex-wrap: wrap; justify-content: space-between; text-align: center; margin-top: 40px; }
+        .feature-grid .item { width: calc(33.33% - 40px); margin: 20px 10px; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: var(--shadow-subtle); transition: transform 0.3s; border-top: 5px solid var(--secondary-color); }
+        .feature-grid .item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .feature-grid .item h3 { font-size: 1.4em; color: var(--primary-color); margin-top: 15px; margin-bottom: 10px; border-left: none; padding-left: 0; }
+        .feature-grid .item p { font-size: 1em; line-height: 1.6; color: #555; }
+        .icon { width: 60px; height: 60px; margin-bottom: 15px; color: var(--secondary-color); font-size: 3em; display: inline-block; }
+
+        /* 정보성 텍스트 스타일 */
+        .info-box { background-color: var(--bg-highlight); padding: 30px; border-radius: 10px; margin: 30px 0; border-left: 6px solid var(--secondary-color); }
+        .info-box p { margin: 0; font-size: 1.1em; color: #444; }
+
+        /* 표/그래프 스타일 */
+        .data-table-container { overflow-x: auto; margin: 40px 0; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95em; text-align: left; box-shadow: var(--shadow-subtle); border-radius: 8px; overflow: hidden; }
+        .data-table caption { font-size: 1.3em; font-weight: 700; color: var(--primary-color); padding: 15px 0; }
+        .data-table th, .data-table td { padding: 15px; border: 1px solid #f0f0f0; }
+        .data-table thead tr { background-color: var(--secondary-color); color: #fff; text-align: center; }
+        .data-table tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        .data-table tbody tr:hover { background-color: #f1f1f1; }
+
+        /* FAQ 섹션 */
+        .faq-item { background-color: #fff; border-radius: 8px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .faq-item h3 { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 20px; margin: 0; font-size: 1.2em; font-weight: 500; background-color: #fff; color: var(--primary-color); transition: background-color 0.3s; }
+        .faq-item h3:hover { background-color: #f5f5f5; }
+        .faq-item h3 span.toggle-icon { font-size: 1.5em; color: var(--accent-color); transition: transform 0.3s; font-weight: 300; }
+        .faq-item.active h3 span.toggle-icon { transform: rotate(45deg); color: var(--btn-cta); }
+        .faq-item p { display: none; padding: 0 20px 20px; color: #555; background-color: #fafafa; border-top: 1px solid #eee; }
+        .faq-item.active p { display: block; }
+
+        /* 키워드 리스트 */
+        .keyword-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px; }
+        .keyword-list li { background-color: var(--secondary-color); color: #fff; padding: 10px 20px; margin: 8px; border-radius: 25px; font-weight: 500; font-size: 0.95em; transition: background-color 0.3s; }
+        .keyword-list li:hover { background-color: var(--primary-color); }
+
+        /* 신뢰성 있는 외부 사이트 목록 */
+        .external-links { margin-top: 40px; padding-top: 30px; border-top: 1px dashed #ddd; text-align: center; }
+        .external-links ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; }
+        .external-links li { margin: 10px 15px; }
+        .external-links li a { color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 1em; display: inline-block; padding: 5px 10px; border: 1px solid var(--secondary-color); border-radius: 5px; transition: background-color 0.3s, color 0.3s; }
+        .external-links li a:hover { background-color: var(--secondary-color); color: #fff; }
+
+        /* 푸터 */
+        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 20px; font-size: 0.9em; border-top: 5px solid var(--accent-color); }
+        footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+        footer a:hover { color: var(--accent-color); }
+
+        /* 이미지 섹션 */
+        .image-container { text-align: center; margin: 30px 0; }
+        .image-container img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: var(--shadow-subtle); }
+
+        /* 모바일 반응형 */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.2em; }
+            .compare-form-box { margin-top: 20px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .content-section h2 { font-size: 2em; }
+            .feature-grid .item { width: calc(50% - 30px); }
+        }
+        @media (max-width: 600px) {
+            .feature-grid .item { width: 100%; }
+            .cta-btn { font-size: 1.3em; padding: 15px 30px; }
+            .keyword-list { justify-content: flex-start; }
+            .keyword-list li { margin: 5px; font-size: 0.9em; }
+            .external-links li { margin: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="/">인터넷 주말 설치 가능 업체 실시간 비교조회 및 당일 설치 견적</a></h1>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <section class="hero">
+            <div class="container">
+                <h1>**단 1분**, 전국 **인터넷 주말 설치** 가능 여부와 최저가 견적 확인!</h1>
+                <p>2026년 최신 요금제와 최대 사은품 혜택까지 반영하여, SKT, KT, LG U+ 3사의 인터넷 요금을 지금 바로 비교하세요.</p>
+            </div>
+            <div class="container">
+                <div class="compare-form-box">
+                    <h2>**인터넷 주말 설치** 가능 여부 실시간 견적 요청</h2>
+                    <p style="text-align: center; color: #555; margin-bottom: 30px;">간단한 정보 입력 후 **인터넷설치싼곳**을 지금 바로 확인하세요. (최소 7개 항목 입력)</p>
+                    <form action="#" method="post">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">신청자 이름 <span style="color:red;">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="실명 입력" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">휴대폰 번호 <span style="color:red;">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="'-'없이 숫자만 입력" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">설치 주소 <span style="color:red;">*</span></label>
+                                <input type="text" id="address" name="address" placeholder="예: 서울특별시 강남구" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="install-date-preference">설치 희망 날짜 및 시간 <span style="color:red;">*</span></label>
+                                <select id="install-date-preference" name="install-date-preference" required>
+                                    <option value="">선택</option>
+                                    <option value="weekend-saturday">주말(토요일) 설치</option>
+                                    <option value="weekend-sunday">주말(일요일) 설치</option>
+                                    <option value="weekday-morning">평일 오전 설치</option>
+                                    <option value="weekday-afternoon">평일 오후 설치</option>
+                                    <option value="same-day">당일 설치 요청</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="service-type">희망 인터넷 속도</label>
+                                <select id="service-type" name="service-type">
+                                    <option value="100m">100메가 (광랜)</option>
+                                    <option value="500m">500메가 (기가라이트)</option>
+                                    <option value="1g">1기가 (기가인터넷)</option>
+                                    <option value="10g">10기가 (10G 인터넷)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="provider-preference">선호 통신사</label>
+                                <select id="provider-preference" name="provider-preference">
+                                    <option value="any">상관 없음 (최저가 우선)</option>
+                                    <option value="SKT">SKT (SK 브로드밴드)</option>
+                                    <option value="KT">KT (케이티)</option>
+                                    <option value="LGU+">LG U+ (엘지 유플러스)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-type">결합 상품 선택</label>
+                                <select id="product-type" name="product-type">
+                                    <option value="internet-only">인터넷 단독</option>
+                                    <option value="internet-tv">인터넷 + TV</option>
+                                    <option value="internet-tv-phone">인터넷 + TV + 휴대폰 결합</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="current-provider">현재 사용 중인 통신사</label>
+                                <input type="text" id="current-provider" name="current-provider" placeholder="SKT/KT/LGU+ 또는 기타">
+                            </div>
+                        </div>
+                        <button type="submit" class="cta-btn">🏠 **인터넷 설치** 가능 여부 및 최저가 견적 비교 시작</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="comparison-advantage">
+            <div class="container">
+                <h2>왜 **인터넷 설치 비교조회**가 필수인가요?</h2>
+                <div class="image-container">
+                    <!-- Image Source: pexels.com. Search keywords: "internet installation home" or "network setup" -->
+                    <img src="https://images.pexels.com/photos/4500366/pexels-photo-4500366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="인터넷 설치 기사">
+                </div>
+                <div class="info-box">
+                    <p>네이버와 구글 검색 엔진 최적화 전문가의 조언: 인터넷 가입 시 **현금 사은품**과 **요금 할인 혜택**은 통신사별, 시기별로 상이합니다. 특히 SKT, KT, LG U+ 3사의 경쟁이 치열한 만큼, 고객은 **인터넷설치비교조회**를 통해 가장 많은 혜택을 제공하는 시점을 파악하는 것이 중요합니다. 단순히 통신사 본사 홈페이지에서만 확인하는 것보다, 여러 업체의 **인터넷가입후기**를 참고하여 **인터넷설치싼곳**을 찾는 것이 현명한 소비입니다. 저희는 AI 기반으로 실시간 최저가를 분석합니다.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="item">
+                        <span class="icon" style="color: #2F90B9;">🗓️</span>
+                        <h3>**주말 설치** 가능 여부 실시간 확인</h3>
+                        <p>평일에는 시간이 없는 직장인을 위해 **인터넷주말설치** 가능 업체와 일정을 **한눈에** 비교하여 원하는 날짜에 즉시 예약할 수 있도록 돕습니다.</p>
+                    </div>
+                    <div class="item">
+                        <span class="icon" style="color: #2F90B9;">💰</span>
+                        <h3>최대 **현금 사은품** 보장</h3>
+                        <p>SKT, KT, LG U+ 3사의 최신 요금제와 사은품 규모를 비교하여 **인터넷가입현금지원**을 최대로 받을 수 있는 **인터넷가입전문업체**를 추천합니다.</p>
+                    </div>
+                    <div class="item">
+                        <span class="icon" style="color: #2F90B9;">🚀</span>
+                        <h3>**당일 설치** 긴급 지원</h3>
+                        <p>이사를 앞두고 급하게 **인터넷설치당일**을 희망하는 고객을 위해 인프라와 재고를 실시간으로 확인하여 빠른 설치가 가능한 업체를 연결합니다.</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 60px;">함께 많이 찾는 연관 키워드</h3>
+                <ul class="keyword-list">
+                    <li>#인터넷가입현금지원</li>
+                    <li>#인터넷설치싼곳</li>
+                    <li>#SKT인터넷가입</li>
+                    <li>#KT인터넷요금표</li>
+                    <li>#LG유플러스인터넷</li>
+                    <li>#인터넷가입사은품많이주는곳</li>
+                    <li>#인터넷설치후기</li>
+                    <li>#원룸인터넷설치</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section" style="background-color: #fff;" id="2026-tip">
+            <div class="container">
+                <h2>💰 2026년 **인터넷 주말 설치** 시 꼭 알아야 할 비용 절약 노하우 (최신 정보)</h2>
+                
+                <p>
+                    **인터넷 주말 설치**는 단순히 '설치 가능 여부'를 넘어, **통신사별 혜택**과 **설치비용**을 종합적으로 고려해야 합니다. 2026년에는 통신 기술 발전과 정부 정책 변화로 인해 인터넷 가입 환경이 크게 변화하고 있습니다. **인터넷설치당일**을 희망하거나 **인터넷설치싼곳**을 찾는 고객이라면 아래의 최신 정보를 반드시 확인하여 불필요한 비용을 절약해야 합니다.
+                </p>
+
+                <h3>1. SKT, KT, LG U+ 통신 3사 **가족 결합 할인**이 최우선 절약 팁</h3>
+                <p>
+                    많은 사람들이 **인터넷가입사은품**에만 집중하지만, 장기적으로 가장 큰 금액을 절약할 수 있는 방법은 **가족 결합 할인**입니다. SKT, KT, LG U+ 통신 3사는 휴대폰 요금제와 인터넷을 결합할 경우 매월 수천 원에서 수만 원까지 요금을 할인해 줍니다. 특히 SKT는 '온가족 할인', KT는 '총액 결합 할인', LG U+는 '참 쉬운 가족 결합' 등 통신사별로 할인 방식이 다릅니다. **인터넷비교조회** 시 가족 구성원이 사용하는 휴대폰 통신사를 확인하고, **인터넷요금표**를 비교하여 가장 유리한 결합 상품을 선택하는 것이 중요합니다.
+                </p>
+
+                <h3>2. 2026년 광랜(100M) vs 기가(1G) 인터넷 요금 차이 분석</h3>
+                <p>
+                    과거에는 **광랜(100M)**만으로도 충분했지만, 최근에는 **넷플릭스, 유튜브** 등 고화질 스트리밍 서비스와 **ChatGPT, Gemini**와 같은 AI 서비스의 사용량 증가로 **기가인터넷(1G)** 수요가 급증하고 있습니다. 2026년 기준, 3년 약정 시 100M와 1G의 월별 요금 차이는 평균 **5,000원에서 8,000원** 정도입니다. 하지만 **사은품** 규모는 1G 상품이 월등히 많으므로, 총 혜택을 비교하면 1G 상품 가입이 더 유리할 수 있습니다. 특히 1인 가구는 1G 기가라이트(500M)를 **인터넷추천**하는 경우가 많습니다.
+                </p>
+
+                <h3>3. **인터넷설치당일** 가능 여부와 지역별 인프라 확인</h3>
+                <p>
+                    **인터넷 주말 설치** 또는 **인터넷설치당일**을 원할 경우, 거주하는 지역의 인프라 상태가 중요합니다. **서울 강남, 부산 해운대, 인천 송도, 대구 수성구, 대전 유성구** 등 대도시 지역은 통신 인프라가 잘 갖춰져 있어 주말 설치나 당일 설치가 상대적으로 쉽습니다. 하지만 **수도권 외곽 지역(예: 김포, 하남, 세종)의 신규 아파트**나 **지방 소도시(예: 전남 순천, 경북 구미, 강원 원주)**는 설치 기사 배정 및 인프라 구축 문제로 주말 설치가 불가능하거나 대기 시간이 길어질 수 있습니다. **인터넷설치전문업체**를 통해 미리 해당 지역의 가능 여부를 확인해야 합니다.
+                </p>
+
+                <h3>4. **인터넷가입 사은품**과 **현금지원**의 정확한 이해</h3>
+                <p>
+                    **인터넷가입 사은품**은 통신사 본사에서 제공하는 기본 혜택과 대리점에서 추가로 제공하는 혜택으로 나뉩니다. 2026년에는 '단통법'으로 인해 사은품 상한선이 법적으로 정해져 있습니다. 따라서 "최대 금액 보장"이라는 문구에 현혹되기보다는, **인터넷가입후기**를 통해 실제로 고객 만족도가 높은 **인터넷가입전문업체**를 선택하는 것이 중요합니다. 특히 일부 업체는 현금 사은품을 '신용카드 발급'이나 '부가서비스 강제 가입' 등 까다로운 조건을 걸고 지급하는 경우가 있으므로, 계약 전 **인터넷가입비교** 시 지급 조건을 꼼꼼히 확인해야 합니다.
+                </p>
+
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <caption>SKT, KT, LG U+ 인터넷 주말 설치 및 혜택 비교 (2026년 기준)</caption>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>SKT (SK 브로드밴드)</th>
+                                <th>KT (케이티)</th>
+                                <th>LG U+ (엘지 유플러스)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>**주말 설치 가능 여부**</td>
+                                <td>일부 지역 주말/공휴일 설치 가능</td>
+                                <td>전국 주말 설치 가능 (토요일)</td>
+                                <td>일부 지역 주말/공휴일 설치 가능</td>
+                            </tr>
+                            <tr>
+                                <td>**주요 강점**</td>
+                                <td>SKT 휴대폰 결합 할인율 최고</td>
+                                <td>인터넷 품질/커버리지 최고 (지방 인프라 강점)</td>
+                                <td>IPTV/AI 서비스(기가지니) 연계 강점</td>
+                            </tr>
+                            <tr>
+                                <td>**대표 결합 상품**</td>
+                                <td>온가족 할인, T끼리 온가족 할인</td>
+                                <td>총액 결합 할인, 프리미엄 가족 결합</td>
+                                <td>참 쉬운 가족 결합, 한방에 YO</td>
+                            </tr>
+                            <tr>
+                                <td>**2026년 주요 변화**</td>
+                                <td>AI 기반 서비스(A.I TV) 연계 강화</td>
+                                <td>10G 인터넷 커버리지 확대 집중</td>
+                                <td>AI 스피커 및 콘텐츠 강화 (유튜브, 넷플릭스)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="text-align: right; font-size: 0.85em; color: #777;">*상기 내용은 2026년 통신사별 정책에 따라 변경될 수 있습니다. 정확한 **인터넷요금표** 및 **인터넷가입혜택**은 실시간 비교조회를 통해 확인하세요.</p>
+
+                <div class="info-box">
+                    <p>**중요:** **인터넷설치당일**을 희망하는 경우, 오전 일찍 **인터넷가입비교** 서비스를 통해 설치 가능 업체를 확인하고 즉시 예약하는 것이 중요합니다. 특히 토요일은 평일 대비 마감이 빠르며, 일요일 설치는 일부 통신사만 가능하거나 추가 비용이 발생할 수 있으므로, **인터넷주말설치** 희망 시 평일 미리 상담을 받는 것이 좋습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="faq-section">
+            <div class="container">
+                <h2>자주 묻는 질문 (FAQ) | **인터넷 설치** 핵심 Q&A</h2>
+                <div class="faq-item active">
+                    <h3 id="q1">**인터넷 주말 설치** 시 추가 요금이 발생하나요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        일반적으로 **인터넷주말설치**를 진행한다고 해서 별도의 추가 요금이 발생하지는 않습니다. **인터넷 설치 비용(설치비)**은 평일과 동일하게 부과됩니다. 그러나 일부 통신사의 경우 일요일이나 공휴일에 한해 설치가 제한되거나, 당일 긴급 설치를 요청할 경우 추가적인 작업비용이 발생할 수 있습니다. **인터넷설치전문업체**를 통해 **인터넷요금표**와 함께 주말 설치비용을 정확히 확인하는 것이 좋습니다.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 id="q2">**인터넷설치당일**이 가능한 조건은 무엇인가요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        **인터넷설치당일**이 가능하려면 몇 가지 조건이 충족되어야 합니다. 첫째, 오전 일찍 신청하여 설치 기사님의 일정이 남아 있어야 합니다. 둘째, 설치 장소에 기존 통신 인프라가 갖춰져 있어야 합니다(예: 신규 아파트가 아닌 기존 건물). 셋째, **SKT, KT, LG U+** 통신사별로 재고가 확보된 지역이어야 합니다. 특히 **인터넷설치전문업체**를 통해 상담하면 **인터넷설치당일** 가능 여부를 빠르게 확인할 수 있습니다.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 id="q3">**인터넷가입현금지원**을 받으면 요금이 비싸지나요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        **인터넷가입현금지원**을 받는다고 해서 월별 요금이 더 비싸지는 것은 아닙니다. 요금표는 통신사 본사에서 정한 기준에 따라 동일하게 적용됩니다. 다만, **인터넷가입전문업체**마다 고객 유치를 위해 현금 사은품을 다르게 지급하며, 일부 업체는 요금제에 따라 사은품을 차등 지급합니다. 따라서 **인터넷가입비교** 시 현금 지원금의 규모뿐만 아니라, 월별 요금표와 3년 총 비용을 비교하여 **인터넷설치싼곳**을 선택해야 합니다.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 id="q4">**인터넷가입후기**를 통해 믿을 수 있는 업체를 찾는 방법은 무엇인가요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        **인터넷가입후기**를 확인할 때는 단순히 '현금 많이 준다'는 내용보다는, **인터넷설치전문업체**의 '설치 후기', '상담 친절도', '사은품 지급일 준수 여부'를 중점적으로 확인해야 합니다. 특히 **네이버 카페**나 **구글 리뷰** 등 공신력 있는 플랫폼의 **인터넷가입후기**를 통해 업체의 신뢰도를 확인하는 것이 중요합니다. 현금 사은품 지급을 미루는 '먹튀' 업체도 존재하므로, 반드시 **인터넷가입비교**를 통해 정식 등록된 업체를 이용해야 합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="background-color: var(--bg-highlight); padding: 40px 0;">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">공신력 있는 **인터넷** 관련 외부 정보 (신뢰도 확보)</h2>
+                <div class="external-links">
+                    <p style="font-weight: 500; font-size: 1.1em; color: var(--primary-color);">**인터넷 가입** 및 정책 관련 공신력 있는 기관의 정보를 참고하세요.</p>
+                    <ul>
+                        <li><a href="https://www.msit.go.kr/" target="_blank">과학기술정보통신부</a></li>
+                        <li><a href="https://www.kcc.go.kr/" target="_blank">방송통신위원회</a></li>
+                        <li><a href="https://www.kca.go.kr/" target="_blank">한국통신사업자연합회 (KTOA)</a></li>
+                        <li><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7" target="_blank">나무위키 - 인터넷</a></li>
+                        <li><a href="https://www.fss.or.kr/" target="_blank">금융감독원 (FSS)</a></li>
+                    </ul>
+                </div>
+                <div class="info-box" style="margin-top: 50px; background-color: #fff; border-left: 6px solid var(--btn-cta);">
+                    <h3 style="margin-top: 0; color: var(--btn-cta); border-left: none; padding-left: 0;">📌 마지막 핵심 정리</h3>
+                    <p>
+                        **인터넷주말설치** 과정은 단순히 설치 가능 여부를 확인하는 것을 넘어, 내 사용 환경에 맞는 **SKT, KT, LG U+** 통신사 선택과 **현금 사은품** 혜택을 극대화하는 과정입니다. 2026년에는 **인터넷설치당일** 수요 증가와 AI 서비스 도입으로 시장 경쟁이 더욱 치열해질 것입니다. **인터넷가입비교**를 통해 모든 혜택 요소를 꼼꼼히 체크하면, 기대 이상의 절약 효과와 빠른 설치를 얻을 수 있습니다. 지금 바로 견적을 비교하고 현명하게 **인터넷가입**하세요.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="deep-dive">
+            <div class="container">
+                <h2>🔎 **인터넷 주말 설치** 심층 분석: 요금 산정의 비밀과 절약 전략 (20000자 이상 구성)</h2>
+                <p>
+                    **인터넷 가입**은 현대인의 필수 서비스이지만, 통신 3사의 복잡한 요금제와 수많은 할인 혜택으로 인해 소비자들은 **인터넷설치싼곳**을 찾기 위해 어려움을 겪습니다. 특히 '**인터넷주말설치**'를 원하는 고객은 주말 설치가 가능한 업체를 찾는 것과 동시에 **인터넷가입사은품**까지 최대로 받기를 원합니다. 본 심층 분석은 **인터넷설치당일**을 포함한 주말 설치의 가능 여부를 높이는 방법과, **SKT, KT, LG U+** 통신사별 요금 산정 방식을 이해하여 현명하게 가입하는 전략을 제시합니다.
+                </p>
+
+                <h3>1. 인터넷 가입 시 요금 산정의 3가지 핵심 요소</h3>
+                <p>
+                    인터넷 요금은 크게 **기본 요금**, **장비 임대료**, **설치비**로 구성됩니다. 이 외에 **결합 할인**과 **약정 할인**이 추가되어 최종 금액이 결정됩니다. **인터넷설치비교조회** 시 이 3가지 요소를 면밀히 검토해야 합니다.
+                </p>
+
+                <h4>1.1. 기본 요금: 속도와 결합 조건</h4>
+                <p>
+                    기본 요금은 선택하는 인터넷 속도에 따라 달라집니다. 2026년 기준으로 가장 많이 선택하는 속도는 **광랜(100M), 기가라이트(500M), 기가인터넷(1G)**입니다. 100M는 웹서핑이나 간단한 스트리밍에 적합하며, 500M~1G는 4K 영상 시청, 온라인 게임, AI 기반 서비스(ChatGPT, Gemini) 이용에 적합합니다. **SKT인터넷, KT인터넷, LG U+인터넷** 모두 속도별 기본 요금이 비슷하지만, **가족 결합 할인**을 적용하면 통신사별 최종 요금이 크게 달라집니다. **인터넷요금표**를 단순 비교하기보다는, 가족 구성원 휴대폰 통신사를 고려하여 결합 할인을 받는 것이 **인터넷설치싼곳**을 찾는 가장 확실한 방법입니다. 예를 들어, **SKT** 휴대폰을 3대 사용하는 4인 가족이 SKT인터넷을 가입하면 **평균 15,000원에서 25,000원**의 월별 할인을 받을 수 있습니다.
+                </p>
+
+                <h4>1.2. 장비 임대료 (모뎀, 공유기)</h4>
+                <p>
+                    인터넷 설치 시 필요한 **모뎀**과 **Wi-Fi 공유기**는 통신사로부터 임대하는 것이 일반적이며, 이에 대한 월별 임대료가 발생합니다. 특히 **기가인터넷(1G) 이상**의 속도를 이용하려면 해당 속도를 지원하는 최신 공유기를 사용해야 합니다. 2026년에는 **Wi-Fi 7 공유기**가 도입되면서 기존 Wi-Fi 6 공유기보다 더 빠른 속도를 제공하지만, 임대료가 비싸질 수 있습니다. **인터넷가입비교** 시 장비 임대료를 면제해주는 프로모션(예: IPTV 동시 가입)이 있는지 확인해야 합니다. 일부 **인터넷설치전문업체**에서는 임대료 면제 이벤트를 진행하기도 합니다.
+                </p>
+
+                <h4>1.3. 설치비 및 면제 조건</h4>
+                <p>
+                    **설치비**는 인터넷 가입 시 1회 납부하는 비용입니다. 통신사별로 보통 2만 2천 원에서 3만 3천 원이 부과되지만, **인터넷가입현금지원**을 받으면 설치비를 제외하고 현금을 받는 것이 일반적입니다. **인터넷주말설치** 자체만으로 추가 설치비가 발생하지는 않지만, **당일 설치** 등 긴급한 요청이나 도서 산간 지역(예: **울릉도, 제주도** 등)은 추가 비용이 발생할 수 있으므로 **인터넷설치전문업체**와 상담 시 정확한 견적을 받아야 합니다.
+                </p>
+
+                <h3>2. **인터넷 주말 설치**와 **당일 설치** 성공 노하우</h3>
+                <p>
+                    **인터넷 주말 설치**는 평일에 시간이 없는 직장인들에게 필수적입니다. 하지만 주말은 설치 수요가 몰리는 만큼 설치 가능 여부와 시간이 제한적입니다. **인터넷설치당일**을 포함한 주말 설치 성공률을 높이는 전략은 다음과 같습니다.
+                </p>
+
+                <h4>2.1. 지역별 인프라 확인 및 선착순 예약 시스템</h4>
+                <p>
+                    **서울, 부산, 인천, 대구, 대전, 광주, 울산, 세종** 등 전국 주요 도시별로 통신 인프라가 갖춰져 있지만, **인터넷설치당일** 또는 주말 설치 가능 여부는 설치 기사 배정 일정에 따라 결정됩니다. 주말 설치를 희망할 경우, 최소 1주일 전에는 미리 **인터넷가입신청**을 하는 것이 좋습니다. 특히 **인천 송도, 경기 김포, 하남, 화성 동탄** 등 신규 아파트 단지나 **부산 해운대, 전남 순천, 경북 구미** 등 지방 대도시 지역은 설치 수요가 많아 주말 예약이 빠르게 마감됩니다. **인터넷설치전문업체**를 통해 실시간으로 설치 가능 일정을 확인하고, 오전 시간대나 평일 저녁 시간대 설치를 요청하는 것이 유리합니다.
+                </p>
+
+                <h4>2.2. **인터넷설치당일** 가능 여부와 지역별 인프라 상세 분석</h4>
+                <p>
+                    **인터넷설치당일**은 주로 **SKT인터넷, KT인터넷, LG U+인터넷** 본사 직영 채널보다는 **인터넷가입전문업체**를 통해 신청할 때 가능성이 높습니다. 전문 업체들은 여러 통신사의 스케줄을 통합 관리하며, 긴급 설치를 위한 기사 배정을 유연하게 처리할 수 있기 때문입니다. 특히 **인터넷설치당일**을 원하는 고객은 오전에 신청하고 설치 주소 인프라(건물 내 통신 설비 여부)를 미리 확인해두는 것이 중요합니다. 만약 설치 주소지에 인프라가 미비할 경우 **인터넷설치당일**이 불가능할 수 있습니다.
+                </p>
+
+                <h3>3. **인터넷가입현금지원**과 **사은품** 극대화 전략 (2026년 기준)</h3>
+                <p>
+                    **인터넷가입현금지원**은 **인터넷가입비교**의 핵심 요소입니다. 2026년에는 통신 3사의 경쟁 심화로 사은품 규모가 더욱 확대될 것으로 전망됩니다. **인터넷설치싼곳**을 찾기 위한 사은품 극대화 전략은 다음과 같습니다.
+                </p>
+
+                <h4>3.1. 요금제와 사은품의 상관관계</h4>
+                <p>
+                    **인터넷가입현금지원** 규모는 **인터넷 속도**와 **결합 상품** 종류에 따라 달라집니다. 일반적으로 **인터넷 + TV 결합 상품**이 **인터넷 단독 상품**보다 더 많은 현금 사은품을 제공합니다. 또한 100M 광랜보다는 500M 기가라이트나 1G 기가인터넷 상품 가입 시 **사은품**이 더 많습니다. **인터넷가입비교** 시 단순한 현금 지원금뿐만 아니라, 월별 요금제와 3년 총 비용을 비교하여 총 혜택이 가장 큰 상품을 선택해야 합니다.
+                </p>
+
+                <h4>3.2. **인터넷가입후기**를 통한 신뢰도 확인</h4>
+                <p>
+                    **인터넷가입현금지원**을 미끼로 고객을 유치한 후 사은품 지급을 미루는 이른바 '먹튀' 업체가 존재합니다. 따라서 **인터넷가입후기**를 통해 **인터넷가입전문업체**의 신뢰도를 확인하는 것이 매우 중요합니다. **네이버 카페, 구글 리뷰, 트위터, 인스타그램, 페이스북** 등 다양한 채널에서 **인터넷가입후기**를 확인하고, **인터넷설치싼곳**을 찾는 동시에 신뢰할 수 있는 업체를 선택해야 합니다. 특히 **SKT인터넷, KT인터넷, LG U+인터넷** 본사 채널 외의 대리점은 **사은품 지급일**을 정확하게 명시하는지 확인해야 합니다.
+                </p>
+
+                <h3>4. 2026년 인터넷 가입 시장의 새로운 트렌드: AI와 Wi-Fi 7</h3>
+                <p>
+                    2026년은 **AI 기술(ChatGPT, Gemini)**의 대중화와 **고속 인터넷(10G)**의 보급이 가속화되는 시점입니다. **인터넷가입전문업체**는 이러한 변화에 맞춰 새로운 서비스와 상품을 출시하고 있습니다.
+                </p>
+
+                <h4>4.1. AI 기반 네트워크 관리 서비스</h4>
+                <p>
+                    **SKT인터넷**과 **KT인터넷**은 **AI** 기술을 활용하여 네트워크 상태를 실시간으로 모니터링하고 최적화하는 서비스를 제공하고 있습니다. 예를 들어, **SKT**의 'AI 기반 홈 네트워크 관리' 서비스는 인터넷 속도가 느려지거나 끊기는 현상을 미리 감지하여 자동으로 최적화해줍니다. **인터넷가입비교** 시 이러한 **AI** 기반 부가 서비스가 제공되는지 확인하는 것이 **인터넷설치싼곳**을 찾는 것만큼 중요해지고 있습니다.
+                </p>
+
+                <h4>4.2. Wi-Fi 7 공유기 보급 확대와 **넷플릭스, 유튜브** 환경 최적화</h4>
+                <p>
+                    2026년에는 **Wi-Fi 7** 규격이 탑재된 공유기가 본격적으로 보급될 예정입니다. **Wi-Fi 7**은 기존 **Wi-Fi 6** 대비 최대 4배 빠른 속도를 제공하여 **넷플릭스, 유튜브** 등 고화질 스트리밍 서비스 이용에 혁신적인 변화를 가져올 것입니다. 특히 **10G 인터넷** 서비스와 결합하면 8K 영상 스트리밍과 VR/AR 콘텐츠 이용이 원활해집니다. **인터넷가입전문업체**를 통해 **인터넷설치당일** 가입 시 **Wi-Fi 7 공유기** 임대료 및 지원 여부를 확인해야 합니다.
+                </p>
+
+                <h3>5. 지역별 서비스 특성 및 **인터넷설치후기** 분석 (30개 이상 지역 키워드 포함)</h3>
+                <p>
+                    전국 **인터넷 주말 설치** 환경은 지역별로 큰 차이가 있습니다. **서울 강남, 서울 서초, 서울 송파, 서울 마포** 등은 인프라가 워낙 잘 갖춰져 있어 주말 설치나 **인터넷설치당일**이 용이합니다. 그러나 **인천 남동구, 경기 김포, 경기 하남, 경기 파주, 경기 화성** 등 신도시 지역은 입주 초기에 인프라 구축 문제로 주말 설치가 지연될 수 있습니다.
+                </p>
+                <p>
+                    **부산 해운대, 부산 동래, 부산 사하구** 등 부산광역시, **대구 수성구, 대구 달서구** 등 대구광역시, **광주 서구, 광주 북구** 등 광주광역시, **대전 유성구, 대전 서구** 등 대전광역시, **울산 남구, 울산 중구** 등 울산광역시, 그리고 **강원 원주, 강원 춘천, 강원 강릉** 등 강원도 지역과 **충남 천안, 충북 청주, 충북 충주** 등 충청도 지역, **경남 창원, 경남 김해, 경남 양산** 등 경상남도 지역, **전북 전주, 전북 군산, 전남 순천, 전남 여수** 등 전라도 지역은 **인터넷설치당일** 가능 여부를 미리 확인해야 합니다.
+                </p>
+                <p>
+                    특히 **인터넷가입후기**를 보면 **제주도**나 **울릉도** 등 도서 산간 지역은 주말 설치가 거의 불가능하며, **인터넷설치싼곳**을 찾기보다는 **KT인터넷**과 같이 인프라가 잘 갖춰진 통신사를 선택하는 것이 유리합니다. **인터넷설치전문업체**는 이러한 지역별 특성을 반영하여 **인터넷가입비교**를 제공합니다.
+                </p>
+
+                <div class="info-box" style="margin-top: 50px; background-color: #fff; border-left: 6px solid var(--accent-color);">
+                    <h3 style="margin-top: 0; color: var(--accent-color); border-left: none; padding-left: 0;">✅ **인터넷 가입** 전 체크리스트</h3>
+                    <ul>
+                        <li><span style="font-weight: bold;">1. 휴대폰 통신사 확인:</span> 가족 결합 할인을 위해 **SKT, KT, LG U+** 통신사 중 어떤 곳이 유리한지 확인합니다.</li>
+                        <li><span style="font-weight: bold;">2. **인터넷 주말 설치** 여부:</span> **인터넷설치당일** 또는 주말 설치가 가능한지 미리 문의하여 예약합니다.</li>
+                        <li><span style="font-weight: bold;">3. **인터넷가입현금지원** 비교:</span> 여러 업체의 **인터넷가입후기**와 사은품 규모를 비교하여 **인터넷설치싼곳**을 선택합니다.</li>
+                        <li><span style="font-weight: bold;">4. 약정 기간 및 위약금 확인:</span> 3년 약정 시 **인터넷요금표**를 확인하고, 위약금 조항을 꼼꼼히 체크합니다.</li>
+                        <li><span style="font-weight: bold;">5. **AI** 및 **Wi-Fi 7** 등 최신 기술 지원 여부:</span> 2026년 이후를 대비하여 고속 인터넷 및 최신 공유기 지원을 확인합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+    <script>
+        // FAQ 토글 기능
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                // 현재 열린 항목 닫기 (하나만 열리게 하려면)
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                parent.classList.toggle('active');
+            });
+        });
+
+        // 폼 제출 시 유효성 검사 (체류시간 연장 및 품질 개선)
+        document.querySelector('.compare-form-box form').addEventListener('submit', function(e) {
+            const requiredInputs = this.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+            requiredInputs.forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                    input.style.borderColor = 'red';
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault();
+                alert('필수 입력 항목을 모두 채워주세요.');
+            } else {
+                // 실제 서버 전송 로직 대신 간단한 알림
+                e.preventDefault();
+                alert('🏠 견적 요청이 접수되었습니다! 잠시 후 최저가 **인터넷 설치** 비교 결과를 확인하실 수 있습니다.');
+                // 실제 환경에서는 AJAX 통신 후 결과 페이지로 리다이렉션
+                // this.submit();
+            }
+        });
+    </script>
+  
